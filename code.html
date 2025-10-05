@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Electricity_Billing_System</title>
+  <link rel="icon" type="image/png" href="electric-bill-statement-8505717.webp">
+  <link rel="stylesheet" href="code.css" />
+</head>
+<body>
+  <div class="box">
+    <h1>Electricity Bill</h1>
+
+    <form id="billForm">
+      <label style="width: 106%;">Customer name
+        <input id="name" placeholder=""/>
+      </label>
+      <div class="row">
+        <label>Previous reading (kWh)
+          <input id="prev" type="number" min="0" step="1" required>
+        </label>
+        <label>Current reading (kWh)
+          <input id="curr" type="number" min="0" step="1" required>
+        </label>
+      </div>
+
+      <div class="row center-row">
+        <label>Fixed charge (₹)
+          <input id="fixed" type="number" min="0" step="0.01" value="0.00" required>
+        </label>
+      </div>
+
+      <div id="err" class="error"></div>
+      <div class="actions inline-buttons">
+        <button type="submit">Calculate</button>
+        <button type="reset" class="secondary">Reset</button>
+      </div>
+    </form>
+
+    <div id="out" class="result">
+      <p><strong id="outName"></strong></p>
+      <p>Units consumed: <span id="units">0</span> kWh</p>
+      <p>Energy charge: ₹<span id="energy">0.00</span></p>
+      <p>Fixed charge: ₹<span id="fixedOut">0.00</span></p>
+      <hr>
+      <p><strong>Total payable: ₹<span id="total">0.00</span></strong></p>
+    </div>
+  </div>
+  <script src="code.js" defer></script>
+</body>
+</html>

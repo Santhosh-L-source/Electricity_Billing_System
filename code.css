@@ -1,0 +1,126 @@
+body
+ {
+    font-family: system-ui, Arial, sans-serif; 
+    margin: 24px;
+    background: hsl(240, 4%, 74%);
+ }
+.box 
+{     max-width: 1000px;
+      margin: 0 auto;
+      background: #fff; 
+      border: 1px solid #e3e3e7; 
+      border-radius: 75px;
+       padding: 200px; 
+}
+h1 
+{ 
+    font-size: 50px; 
+    margin: 0 0 12px;
+}
+label 
+{
+     display: block;
+     margin: 10px 0 10px; 
+     font-weight: 600;
+}
+input 
+{
+     width: 90%;
+     padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+     font: inherit;
+}
+.row 
+{ 
+    display: grid;
+     grid-template-columns: 1fr 1fr;
+     gap:10px;
+}
+.actions 
+{
+     margin-top: 12px;
+     display: flex; 
+     gap: 10px; 
+    
+}
+.center-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* spacing between fixed charge and buttons */
+}
+
+/* Make buttons look uniform */
+.inline-buttons button {
+  width: 120px;     /* same size buttons */
+  padding: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* Calculate button */
+.inline-buttons button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+}
+
+.inline-buttons button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Reset button */
+.inline-buttons button[type="reset"] {
+  background-color: #6c757d;
+  color: white;
+}
+
+.inline-buttons button[type="reset"]:hover {
+  background-color: #565e64;
+}
+
+button
+{ 
+    padding: 10px 14px; 
+    border: none; background: #0d6efd; 
+    color: white; 
+    border-radius: 6px; 
+    cursor: pointer;
+    font: inherit;
+}
+button.secondary 
+{ 
+    background: #6c757d;
+ }
+button:hover 
+{ 
+    opacity: 0.95; 
+}
+.error 
+{ 
+    color: #b00020;
+    margin-top: 6px;
+    min-height: 20px;
+}
+.result
+ { 
+    margin-top: 16px; 
+    padding: 12px; 
+    background: #f8f9fa; 
+    border: 1px solid #eee; 
+    border-radius: 8px; 
+    display: none; 
+}
+.result p 
+{ 
+    margin: 6px 0;
+}
+hr 
+{ 
+    border: 0; 
+    border-top: 1px solid #e6e6ea; 
+    margin: 10px 0; 
+}
